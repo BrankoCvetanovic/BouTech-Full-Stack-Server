@@ -21,6 +21,7 @@ const notFoundMiddleware = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 
 app.use(cors());
+const __dirname = path.resolve();
 app.use("/static", express.static(path.join(__dirname, "images")));
 app.use(express.json());
 
